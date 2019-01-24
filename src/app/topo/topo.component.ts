@@ -2,6 +2,7 @@ import { Observable } from 'rxjs/Observable';
 import { Component, OnInit } from '@angular/core';
 import { OfertasService } from '../ofertas.service';
 import { Oferta } from '../shared/oferta.model';
+import { error } from '@angular/compiler/src/util';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -21,6 +22,7 @@ export class TopoComponent implements OnInit {
 
   public pesquisa(termoDaBusca: string): void {
     this.ofetas =  this.ofertasService.pesquisaOfertas(termoDaBusca);
-    console.log(this.ofetas);
+    this.ofetas.subscribe(
+      (ofertas: Oferta[]) => console.log(ofertas));
   }
 }
