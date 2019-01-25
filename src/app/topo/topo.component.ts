@@ -23,6 +23,8 @@ export class TopoComponent implements OnInit {
   public pesquisa(termoDaBusca: string): void {
     this.ofetas =  this.ofertasService.pesquisaOfertas(termoDaBusca);
     this.ofetas.subscribe(
-      (ofertas: Oferta[]) => console.log(ofertas));
+      (ofertas: Oferta[]) => console.log(ofertas),
+      (erro: any) => console.log(erro),
+      () => console.log('Fluxo de eventos completo'));
   }
 }
