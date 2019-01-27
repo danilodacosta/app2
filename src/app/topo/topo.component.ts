@@ -14,14 +14,15 @@ import { Subject } from 'rxjs';
 })
 export class TopoComponent implements OnInit {
 
-  public ofetas: Observable<Oferta[]>;
+  public ofertas: Observable<Oferta[]>;
   private subjectPesquisa: Subject<string> = new Subject<string>(); // serve como proxy
+  public ofertas2: Oferta[];
 
   constructor(private ofertasService: OfertasService) { }
 
   ngOnInit() {
 
-    this.ofetas = this.subjectPesquisa // retorno Oferta[]
+    this.ofertas = this.subjectPesquisa // retorno Oferta[]
     .debounceTime(1000) // executa a ação do swicthMap após 1s.
     .distinctUntilChanged() // executa o metodo somente se tiver uma alteração no termo de pesquisa , evitando chamadas duplicadas.
     .switchMap((termo: string) => {
@@ -31,9 +32,16 @@ export class TopoComponent implements OnInit {
         return Observable.of<Oferta[]>([]);
       }
         return this.ofertasService.pesquisaOfertas(termo);
+    })
+
+    .catch((err: any) => {
+        console.log(err);
+        return Observable.of<Oferta[]>([]);
     });
 
-    this.ofetas.subscribe((ofertas: Oferta[]) => console.log(ofertas));
+    this.ofertas.subscribe((ofertas: Oferta[]) => {
+      this.ofertas2 = ofertas;
+    });
   }
 
   public pesquisa(termoDaBusca: string): void {
