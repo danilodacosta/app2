@@ -1,9 +1,12 @@
-import { Observable } from 'rxjs/Observable';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
+
+import '../util/rxjs-extensions';
+
 import { OfertasService } from '../ofertas.service';
 import { Oferta } from '../shared/oferta.model';
-import { error } from '@angular/compiler/src/util';
-import { Subject } from 'rxjs';
+
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -16,7 +19,6 @@ export class TopoComponent implements OnInit {
 
   public ofertas: Observable<Oferta[]>;
   private subjectPesquisa: Subject<string> = new Subject<string>(); // serve como proxy
-  public ofertas2: Oferta[];
 
   constructor(private ofertasService: OfertasService) { }
 
@@ -38,13 +40,13 @@ export class TopoComponent implements OnInit {
         console.log(err);
         return Observable.of<Oferta[]>([]);
     });
-
-    this.ofertas.subscribe((ofertas: Oferta[]) => {
-      this.ofertas2 = ofertas;
-    });
   }
 
   public pesquisa(termoDaBusca: string): void {
     this.subjectPesquisa.next(termoDaBusca);
+  }
+
+  public limpaPesquisa(): void {
+    this.subjectPesquisa.next('');
   }
 }
