@@ -13,11 +13,17 @@ export class OrdemCompraComponent implements OnInit {
   public complemento = '';
   public formaPagamento = '';
 
-  // controle de validação dos campos
+  // controles de validação dos campos
   public enderecoValido: boolean;
-  public numeroValidp: boolean;
+  public numeroValido: boolean;
   public complementoValido: boolean;
   public formaPagamentoValido: boolean;
+
+  // estados primitivos dos campos (pristine)
+  public enderecoEstadoPrimitivo: boolean = true;
+  public numeroEstadoPrimitivo: boolean = true;
+  public complementoEstadoPrimitivo: boolean = true;
+  public formaPagamentoEstadoPrimitivo: boolean = true;
 
   constructor() { }
 
@@ -27,6 +33,7 @@ export class OrdemCompraComponent implements OnInit {
 
   public atualizaEndereco(endereco: string): void {
     this.endereco = endereco;
+    this.enderecoEstadoPrimitivo = false;
     // console.log('endereço: ' + this.endereco);
 
     // se a string for maior que 3
@@ -39,17 +46,33 @@ export class OrdemCompraComponent implements OnInit {
 
   public atualizaNumero(numero: string): void {
     this.numero = numero;
-    console.log('numero: ' + this.numero);
+    this.numeroEstadoPrimitivo = false;
+    //console.log('numero: ' + this.numero);
+    if (this.numero.length > 0) {
+      this.numeroValido = true;
+    } else {
+      this.numeroValido = false;
+    }
   }
 
   public atualizaComplemento(complemento: string): void {
     this.complemento = complemento;
-    console.log('complemento: ' + this.complemento);
+    this.complementoEstadoPrimitivo = false;
+    //console.log('complemento: ' + this.complemento);
+    if (this.complemento.length > 0) {
+      this.complementoValido = true;
+    } 
   }
 
-  public atualizaFormaPagamento(formaPagemnto: string): void {
-    this.formaPagamento = formaPagemnto;
-    console.log('forma de pagamento: ' + this.formaPagamento);
+  public atualizaFormaPagamento(formaPagamento: string): void {
+    this.formaPagamento = formaPagamento;
+    this.formaPagamentoEstadoPrimitivo = false;
+    //console.log('forma de pagamento: ' + this.formaPagamento);
+    if (this.formaPagamento.length > 0) {
+      this.formaPagamentoValido = true;
+    } else {
+      this.formaPagamentoValido = false;
+    }
   }
 
 }
