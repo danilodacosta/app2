@@ -213,6 +213,18 @@
       "complemento": "15",
       "formaPagamento": "dinheiro",
       "id": 4
+    },
+    {
+      "endereco": "Trav. Almirante Wandekolk",
+      "numero": "2184",
+      "complemento": "Prox. a Avenida Domingos Marreiros",
+      "id": 5
+    },
+    {
+      "endereco": "Trav. Antonio Everdosa",
+      "numero": "43",
+      "complemento": "Proximo ao posto BR",
+      "id": 6
     }
   ]
 }
