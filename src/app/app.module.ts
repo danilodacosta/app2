@@ -5,7 +5,7 @@ import localePt from '@angular/common/locales/pt';
 
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
+import { FormsModule } from '@angular/forms';
 import { ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
@@ -18,7 +18,7 @@ import { OfertaComponent } from './oferta/oferta.component';
 import { ComoUsarComponent } from './oferta/como-usar/como-usar.component';
 import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
 
-//pipe
+// pipe
 import { DescricaoReduzida } from './util/descricao-reduzida.pipe';
 import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
 import { OrdemCompraSucessoComponent } from './ordem-compra-sucesso/ordem-compra-sucesso.component';
@@ -41,7 +41,8 @@ import { OrdemCompraSucessoComponent } from './ordem-compra-sucesso/ordem-compra
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    FormsModule
   ],
   providers: [ {provide: LOCALE_ID, useValue: 'pt'}],
   bootstrap: [AppComponent]
