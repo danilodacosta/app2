@@ -187,44 +187,10 @@
   ],
   "pedidos": [
     {
-      "endereco": "Rua XYZ",
-      "numero": "18",
-      "complemento": "Casa D",
-      "formaPagamento": "dinheiro",
+      "endereco": "RUA XYZ",
+      "numero": "15",
+      "complemento": "CASA B",
       "id": 1
-    },
-    {
-      "endereco": "RUA 5 ",
-      "numero": "14",
-      "complemento": "",
-      "formaPagamento": "debito",
-      "id": 2
-    },
-    {
-      "endereco": "asdasd",
-      "numero": "asdad",
-      "complemento": "asd",
-      "formaPagamento": "dinheiro",
-      "id": 3
-    },
-    {
-      "endereco": "Rua ",
-      "numero": "y",
-      "complemento": "15",
-      "formaPagamento": "dinheiro",
-      "id": 4
-    },
-    {
-      "endereco": "Trav. Almirante Wandekolk",
-      "numero": "2184",
-      "complemento": "Prox. a Avenida Domingos Marreiros",
-      "id": 5
-    },
-    {
-      "endereco": "Trav. Antonio Everdosa",
-      "numero": "43",
-      "complemento": "Proximo ao posto BR",
-      "id": 6
     }
   ]
 }
