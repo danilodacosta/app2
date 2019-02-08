@@ -191,6 +191,36 @@
       "numero": "15",
       "complemento": "CASA B",
       "id": 1
+    },
+    {
+      "numero": "2184",
+      "formaPagamento": "dinheiro",
+      "id": 2
+    },
+    {
+      "numero": "12",
+      "formaPagamento": "debito",
+      "id": 3
+    },
+    {
+      "numero": "1584",
+      "formaPagamento": "dinheiro",
+      "id": 4
+    },
+    {
+      "numero": "asdasd",
+      "formaPagamento": "dinheiro",
+      "id": 5
+    },
+    {
+      "numero": "asdasd",
+      "formaPagamento": "dinheiro",
+      "id": 6
+    },
+    {
+      "numero": "asd",
+      "formaPagamento": "debito",
+      "id": 7
     }
   ]
 }

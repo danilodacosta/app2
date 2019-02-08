@@ -5,6 +5,7 @@ import { OfertasService } from '../ofertas.service';
 import { Observable, Observer, Subscription } from 'rxjs';
 // tslint:disable-next-line:import-blacklist
 import 'rxjs/Rx';
+import CarrinhoService from '../carrinho.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ import 'rxjs/Rx';
   selector: 'app-oferta',
   templateUrl: './oferta.component.html',
   styleUrls: ['./oferta.component.css'],
-  providers: [OfertasService]
+  providers: [OfertasService , CarrinhoService]
 })
 
 export class OfertaComponent implements OnInit, OnDestroy {
@@ -20,9 +21,15 @@ export class OfertaComponent implements OnInit, OnDestroy {
   public oferta: Oferta;
 
   // rota ativa
-  constructor(private route: ActivatedRoute, private ofertasService: OfertasService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private ofertasService: OfertasService,
+    private carrinhoService: CarrinhoService
+  ) { }
 
   ngOnInit() {
+
+    console.log(this.carrinhoService.exibirItens());
 
     this.route.params.subscribe((parametros: Params) => {
       this.ofertasService.getOfertasPorId(parametros.id)
