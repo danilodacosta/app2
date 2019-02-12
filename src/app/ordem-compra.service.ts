@@ -4,6 +4,7 @@ import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
 import { URL_API } from './app.api';
+import { ItemCarrinho } from './shared/item-carrinho.model';
 
 
 
