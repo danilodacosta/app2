@@ -221,6 +221,81 @@
       "numero": "asd",
       "formaPagamento": "debito",
       "id": 7
+    },
+    {
+      "numero": "2184",
+      "formaPagamento": "dinheiro",
+      "itens": [
+        {
+          "id": 4,
+          "img": {
+            "url": "/assets/ofertas/4/img1.jpg"
+          },
+          "titulo": "Estância das águas",
+          "descricao_oferta": "Diversão garantida com piscinas, trilhas e muito mais.",
+          "valor": 31.9,
+          "quantidade": 4
+        },
+        {
+          "id": 5,
+          "img": {
+            "url": "/assets/ofertas/5/img1.jpg"
+          },
+          "titulo": "Kart",
+          "descricao_oferta": "Bateria de Kart de 30 minutos.",
+          "valor": 54.9,
+          "quantidade": 1
+        }
+      ],
+      "id": 8
+    },
+    {
+      "endereco": "ROD. BR 316 KM12 CONDOMINO CITTA MARIS",
+      "numero": "2180",
+      "complemento": "BL07 APTO 401",
+      "formaPagamento": "dinheiro",
+      "itens": [
+        {
+          "id": 4,
+          "img": {
+            "url": "/assets/ofertas/4/img1.jpg"
+          },
+          "titulo": "Estância das águas",
+          "descricao_oferta": "Diversão garantida com piscinas, trilhas e muito mais.",
+          "valor": 31.9,
+          "quantidade": 1
+        },
+        {
+          "id": 5,
+          "img": {
+            "url": "/assets/ofertas/5/img1.jpg"
+          },
+          "titulo": "Kart",
+          "descricao_oferta": "Bateria de Kart de 30 minutos.",
+          "valor": 54.9,
+          "quantidade": 2
+        }
+      ],
+      "id": 9
+    },
+    {
+      "endereco": "Passagem A",
+      "numero": "404",
+      "complemento": "Prox. Rua Nova",
+      "formaPagamento": "dinheiro",
+      "itens": [
+        {
+          "id": 2,
+          "img": {
+            "url": "/assets/ofertas/2/img1.jpg"
+          },
+          "titulo": "Cozinha Mexicana",
+          "descricao_oferta": "Almoço ou Jantar com Rodízio Mexicano delicioso.",
+          "valor": 32.9,
+          "quantidade": 2
+        }
+      ],
+      "id": 10
     }
   ]
 }
